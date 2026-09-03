@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Appointment and Health Record System for Sabulao Clinic</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="-200 flex items-center justify-center min-h-screen font-sans">
+
+  <div class="bg-blue-300 p-8 rounded-2xl shadow-xl w-full max-w-md border border-slate-100 mx-4">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold text via-black tracking-tight">Medical Appointment and Health Record System for Sabulao Clinic</h2>
+      <p class="text via-black mt-2 text-sm"></p>
+    </div>
+
+    <!-- State 3: Incorrect Credentials Alert -->
+    <div id="authAlert" class="hidden bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm mb-6">
+      Invalid username or password. Please try again.
+    </div>
+
+    <form id="loginForm" class="space-y-5" novalidate>
+      <!-- Username Block -->
+      <div>
+        <label for="username" class="block text-sm font-semibold text- via-black mb-2">Username</label>
+        <input 
+          type="text" 
+          id="username" 
+          placeholder="Enter username"
+          class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder-black text-black"
+        >
+        <!-- State 1: Empty Fields Error -->
+        <p id="usernameError" class="hidden text-red-600 text-xs mt-1.5 font-medium">Username cannot be empty.</p>
+      </div>
+
+      <!-- Password Block -->
+      <div>
+        <label for="password" class="block text-sm font-semibold text-black mb-2">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          placeholder="Enter password"
+          class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder-black text-slate-800"
+        >
+        <!-- State 1: Empty Fields Error -->
+        <p id="passwordError" class="hidden text-red-600 text-xs mt-1.5 font-medium">Password cannot be empty.</p>
+      </div>
+
+      <!-- Submit Button -->
+      <button 
+        type="submit" 
+        class="w-full bg-light to-blue-400-300 hover:bg-white text-black font-semibold py-3 px-4 rounded-xl shadow-md shadow-blue-100 transition-colors cursor-pointer mt-2"
+      >
+        Log In
+      </button>
+    </form>
+  </div>
+
+  <!-- Dito natin ikinonekta ang nakahiwalay mong JS file -->
+  <script src="script.js"></script>
+</body>
+</html>
+
